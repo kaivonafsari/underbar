@@ -32,7 +32,13 @@
   // Return an array of the first n elements of an array. If n is undefined,
   // return just the first element.
   _.first = function(array, n) {
-    return n === undefined ? array[0] : array.slice(0, n);
+    //return n === undefined ? array[0] : array.slice(0, n);
+    if (n === undefined) {
+      return array[0]
+    }
+    else {
+      return array.slice(0, n)
+    }
   };
 
   // Like first, but for the last elements. If n is undefined, return just the
@@ -282,7 +288,7 @@
   // Return a function that can be called at most one time. Subsequent calls
   // should return the previously returned value.
   _.once = function(func) {
-    // TIP: These variables are stored in a "closure scope" (worth researching),
+    // TIP: These variables are stored in 886a "closure scope" (worth researching),
     // so that they'll remain available to the newly-generated function every
     // time it's called.
     var alreadyCalled = false;
