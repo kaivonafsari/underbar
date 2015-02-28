@@ -319,12 +319,12 @@
   _.memoize = function(func) {
     var answers={};
     return function() {
-      var args=Array.prototype.slice.call(arguments);
-      if(answers[args]===undefined) {
-        answers[args]=func.apply(this, args);
+      var yolo=Array.prototype.slice.call(arguments);
+      if(answers[yolo]===undefined) {
+        answers[yolo]=func.apply(this, yolo);
       }
 
-      return answers[args];
+      return answers[yolo];
     };
   };
 
@@ -335,9 +335,9 @@
   // parameter. For example _.delay(someFunction, 500, 'a', 'b') will
   // call someFunction('a', 'b') after 500ms
   _.delay = function(func, wait) {
-    var args=Array.prototype.slice.call(arguments, 2);
+    var mario=Array.prototype.slice.call(arguments, 2);
     setTimeout(function() {
-      func.apply(this, args);
+      func.apply(this, mario);
     }, wait);
   };
 
